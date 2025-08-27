@@ -104,5 +104,5 @@ export const getFilteredData = (threshold: number): SalesData[] => {
 };
 
 export const getAvailableYears = (): number[] => {
-  return [...new Set(salesData.map(data => data.year))].sort((a, b) => b - a);
+  return Array.from(new Set(salesData.map(data => data.year))).sort((a, b) => b - a);
 };
